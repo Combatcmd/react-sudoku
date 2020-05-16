@@ -1,6 +1,6 @@
 # React Sudoku
 
-Just a simple implementation of sudoku game using React JS
+Just a simple implementation of [sudoku game](https://combatcmd.github.io/react-sudoku/) using React JS
 
 ## Install, build and deploy
 
