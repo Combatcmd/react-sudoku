@@ -1,7 +1,7 @@
 import React from "react";
 import Box from "./Box";
 
-const Grid = React.createClass({
+class Grid extends React.Component {
   render() {
     const { grid, status } = this.props;
     const { isSolved } = status;
@@ -26,7 +26,7 @@ const Grid = React.createClass({
         <tbody>{grid.map(renderRow)}</tbody>
       </table>
     );
-  },
-});
+  }
+}
 
 export default Grid;

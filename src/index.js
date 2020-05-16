@@ -3,7 +3,9 @@ import ReactDOM from "react-dom";
 import { createStore, compose, applyMiddleware } from "redux";
 import thunk from "redux-thunk";
 import rootReducer from "./reducers";
+import "./index.css";
 import App from "./App";
+import * as serviceWorker from "./serviceWorker";
 
 const finalCreateStore = compose(
   applyMiddleware(thunk),
@@ -13,3 +15,4 @@ const finalCreateStore = compose(
 const store = finalCreateStore(rootReducer);
 
 ReactDOM.render(<App store={store} />, document.getElementById("root"));
+serviceWorker.register();

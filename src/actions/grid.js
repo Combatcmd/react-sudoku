@@ -1,26 +1,26 @@
-export function inputValue(row, col, val) {
+export const inputValue = (row, col, val) => {
   return {
     type: "INPUT_VALUE",
     row,
     col,
     val,
   };
-}
+};
 
-export function solve() {
+export const solve = () => {
   return {
     type: "SOLVE",
   };
-}
+};
 
-export function clear() {
+export const clear = () => {
   return {
     type: "CLEAR",
   };
-}
+};
 
-export function undo() {
+export const undo = () => {
   return {
     type: "UNDO",
   };
-}
+};

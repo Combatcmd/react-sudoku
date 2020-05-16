@@ -1,6 +1,7 @@
-import cloneDeep from "lodash/cloneDeep";
+import { cloneDeep } from "lodash";
 import { solver } from "../utils/sudoku";
 
+//TODO: create random generator instead of mock init state
 const initialState = [
   [8, 0, 0, 4, 0, 6, 0, 0, 7],
   [0, 0, 0, 0, 0, 0, 4, 0, 0],
@@ -13,9 +14,9 @@ const initialState = [
   [3, 0, 0, 9, 0, 2, 0, 0, 5],
 ];
 
-window.gridHistory = window.gridHistory || [];
+let gridHistory = window.gridHistory || [];
 
-export function grid(state = cloneDeep(initialState), action) {
+export const grid = (state = cloneDeep(initialState), action) => {
   switch (action.type) {
     case "INPUT_VALUE":
       let { row, col, val } = action;
@@ -40,4 +41,4 @@ export function grid(state = cloneDeep(initialState), action) {
     default:
       return state;
   }
-}
+};
